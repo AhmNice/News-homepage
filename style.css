@@ -1,0 +1,229 @@
+@font-face {
+    font-family: myfont;
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+p{
+    font-size: 10px;
+}
+h3{
+    font-size: 15px;
+}
+.container{
+    padding: 55px;
+    padding-right: 255px;
+    padding-left: 255px;
+    margin: auto;
+    font-family:myfont;
+    height: 100vh;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu_open{
+    display: none;
+}
+.navlist{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.navlist > a{
+    text-decoration: none;
+}
+.navlist > a > li{
+    color: black;
+    padding: 20px;
+}
+.navlist > a :hover{
+    color:  hsl(5, 85%, 63%);
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3,0.5fr);
+    gap: 20px;
+}
+.img_con {
+   background-image: url(assets/images/image-web-3-desktop.jpg);
+   background-size: 100%;
+   height: 190px;
+   background-repeat: no-repeat;
+}
+.row-span-2{
+    grid-column: span 2;
+}
+.content :nth-child(2){
+    grid-column-start: 1;
+}
+.content :nth-child(4){
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.news{
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(233, 8%, 79%);
+    font-size: 15px;
+    padding: 6px;
+    line-height: 20px;
+}
+.topic > h1{
+    font-size: 40px;
+}
+.newsTopic{
+    padding: 20px;
+}
+.newsTopic > h2{
+    color: hsl(36, 100%, 99%);
+    font-size: 15px;
+}
+.newsTopic > h2:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+.new > hr{
+    color: hsl(36, 66%, 49%);
+}
+.topic-exp{
+    font-size: 15px;
+}
+.topic-exp > button{
+    background-color: hsl(5, 85%, 63%) ;
+    padding: 10px;
+    border: none;
+    color: white;
+    width: 100px;
+}
+.topic-exp > button:hover{
+    background-color:hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+.section{
+    margin-top: 25px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,0.5fr);
+}
+.section2{
+    display: flex;
+}
+.sec_con > h2{
+    color: hsl(233, 8%, 79%);
+    font-size: 25px;
+    padding-left: 20px;
+}
+.sec_con > h3{
+    color: hsl(240, 100%, 5%);
+    padding-left: 20px;
+}
+.sec_con > h3:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+.sec_con p{
+    padding-left: 20px;
+}
+.sec_img > img{
+    width: 65px;
+    margin-right: 10px;
+}
+.menuopen{
+    display: none;
+}
+.close{
+    display: none;
+}
+@media only screen and (max-width:500px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .header{
+        display: flex;
+        padding-bottom: 10px;
+    }
+    .menuopen{
+        display: inline-block;
+        padding-top: 10px;
+    }
+    .navbar{
+        top: 0px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color:rgba(0, 0, 0, 0.801);
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        transform: translate(100%);
+        transition: 0.5s ease-in-out; 
+    }
+    .nav_open{
+        transform: translateX(0%);
+    }
+    .navlist{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 100vh;
+        width: 50%;
+        right: 0;
+        float: right;
+        padding: 10px;
+        
+    }
+    .close{
+        padding-bottom: 40px;
+        padding-top: 10px;
+        margin-left:0px ;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .content{
+       display: flex;
+       flex-direction: column;
+    }
+    .img_con{
+        background-image: url(assets/images/image-web-3-mobile.jpg);
+    }
+    .section{
+        display: flex;
+        flex-direction: column;
+    }
+    .sec_con > p{
+        font-size: 17px;
+        padding-left: 20px;
+    }
+    .sec_con > h2{
+        font-size: 35px;
+        padding-left: 20px;
+    }
+    .sec_con > h3{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .sec_img > img{
+        width: 95px;
+        display: block;
+        margin-right: 10px;
+    }
+}
